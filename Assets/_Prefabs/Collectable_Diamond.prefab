@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2959439731112934199}
   - component: {fileID: 1213002598192115618}
   - component: {fileID: 914264890796236670}
+  - component: {fileID: 952481242090682530}
   m_Layer: 0
   m_Name: Collectable_Diamond
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651307277198686990}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5000001, z: 0.5000001}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,3 +131,17 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.1736362
   m_Center: {x: -0.00000023841858, y: -0.00041776904, z: 0.11784127}
+--- !u!114 &952481242090682530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651307277198686990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcbad1dfc7f06c4c84b4489c6a10fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 2380321903356551402, guid: 20415de2372eae146b4797f7ccd0d4c7, type: 3}
+  collectableSFX: {fileID: 8300000, guid: 77e908e71e5e07f47bad2be838fe43ff, type: 3}

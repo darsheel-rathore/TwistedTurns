@@ -1,15 +1,14 @@
-using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
-using System;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public bool gameStarted;
-    public uint score = 0;
+    public int score = 0;
 
     private const string _HIGH_SCORE = "HighScore";
     private float scoreWaitTime = 0.25f;
@@ -31,7 +30,7 @@ public class GameManager : MonoBehaviour
         menuUI.SetActive(true);
         // Disable Game UI Panel
         gamePlayUI.SetActive(false);
-        
+
         // Check for high Score
         SaveHighScore();
 
@@ -91,16 +90,16 @@ public class GameManager : MonoBehaviour
 
     private void SaveHighScore()
     {
-        if(PlayerPrefs.HasKey(_HIGH_SCORE))
+        if (PlayerPrefs.HasKey(_HIGH_SCORE))
         {
-            if(score > PlayerPrefs.GetInt(_HIGH_SCORE))
+            if (score > PlayerPrefs.GetInt(_HIGH_SCORE))
             {
-                PlayerPrefs.SetInt(_HIGH_SCORE, (int) score);
+                PlayerPrefs.SetInt(_HIGH_SCORE, (int)score);
             }
         }
         else
         {
-            PlayerPrefs.SetInt(_HIGH_SCORE, (int) score);
+            PlayerPrefs.SetInt(_HIGH_SCORE, (int)score);
         }
     }
 

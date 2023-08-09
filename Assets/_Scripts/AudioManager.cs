@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -25,6 +23,8 @@ public class AudioManager : MonoBehaviour
     {
         m_AudioSource = GetComponent<AudioSource>();
     }
+
+    public AudioSource GetAudioSource() => m_AudioSource;
 
     public void PlayClip()
     {

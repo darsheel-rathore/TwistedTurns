@@ -1,8 +1,7 @@
-using UnityEngine;
-using System;
 using System.Collections;
+using UnityEngine;
 
-public class Plaltform : MonoBehaviour 
+public class Plaltform : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 newPosition;
@@ -12,7 +11,7 @@ public class Plaltform : MonoBehaviour
     private void Start()
     {
         // Init
-        pSpawner = FindAnyObjectByType<PlatformSpawner>();  
+        pSpawner = FindAnyObjectByType<PlatformSpawner>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -33,16 +32,17 @@ public class Plaltform : MonoBehaviour
     {
         // this will make platform fall
         rb.isKinematic = false;
-        
+
         // Wait for the platform to fall off the screen
         yield return new WaitForSeconds(platformFallTime);
-        
+
         // Set platform back to isKinematic
         rb.isKinematic = true;
-        
+
+
         // New position for this platform
         newPosition = pSpawner.GeneratePosition();
-        
+
         // Set this newPosition to current GameObject
         this.transform.position = newPosition;
         this.transform.rotation = Quaternion.identity;
@@ -50,5 +50,5 @@ public class Plaltform : MonoBehaviour
         // Update last position
         pSpawner.UpdateLastPosition();
     }
-    
+
 }
